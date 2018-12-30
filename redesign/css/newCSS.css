@@ -1,0 +1,420 @@
+/* GLOBAL STYLE */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+a {
+  font-family: "Overpass";
+  font-weight: bold;
+  text-decoration: none;
+  color: grey;
+  /* border-bottom: 2px solid grey; */
+}
+
+h1, h2, h3 {
+  font-family: "Overpass";
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  background-color: white;
+  /* margin: 2.5%; */
+  padding: 2.5%;
+}
+
+.logo {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.nav {
+  grid-row: 1;
+  grid-column: 8/13;
+  text-align: right;
+  /* background-color: black; */
+  overflow: hidden;
+}
+
+.nav .icon {
+  /* float: right; */
+  display: none;
+}
+
+.header {
+  grid-row: 2;
+  grid-column: 2/12;
+  padding: 2%;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.projects {
+  grid-column: 1 / 13;
+  grid-row: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  /* justify-content: space-evenly; */
+  justify-content: space-around;
+}
+
+.one-project {
+  display: flex;
+  /* border: 2px solid white; */
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.one-project img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.project-placeholder {
+  /* max-width:100%; */
+}
+
+.header-image {
+  grid-row: 2;
+  grid-column: 1/13;
+}
+
+.header-image img {
+  /* object-fit: cover; */
+  max-width: 100%;
+}
+
+p {
+  font-family: "Overpass";
+
+}
+
+p.content {
+  text-align: left;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.overview {
+  grid-row:3;
+  grid-column: 1/13;
+  background-color: #EBEBE3;
+  padding:1%;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  flex-wrap: wrap;
+}
+
+
+button {
+  border: 0px solid black;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 10px;
+  background-color: #B8E986;
+}
+
+button a {
+  color: black;
+  font-size: 1rem;
+}
+
+.jumpnav {
+  grid-column: 1/13;
+  /* font-family: "Overpass";
+  font-size: 10pt; */
+}
+
+.mainContent{
+  grid-row:4;
+  grid-column: 1/13;
+  /* background-color: red; */
+}
+
+.gallery {
+  grid-column: 2/12;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  grid-gap: 2%;
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  align-items: center;
+  /* justify-content: space-evenly; */
+  justify-content: space-around;
+  /* margin-bottom: 5%; */
+  }
+
+
+  .gallery .himage {
+    max-width: 500px;
+  }
+
+  .gallery .vimage {
+    max-width: 350px;
+  }
+
+  .gallery .image {
+    max-width: 33%;
+  }
+
+  .gallery .four {
+    max-width: 25%;
+  }
+
+  .resp-container {
+    grid-column: 2/12;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100%;
+  }
+
+  .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+  }
+
+  .gallery img {
+    max-width: 100%;
+  }
+
+  .tldr, .details {
+    line-height: 1.5rem;
+  }
+
+  /* .highlight {
+      background-color: #fff2ac;
+      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+      padding: 1%;
+  } */
+
+
+/* SMALL SCREENS */
+@media screen and (max-width: 450px) {
+
+  .overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  }
+
+  .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: "Overpass";
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.hamburger a{
+  font-size:20px;
+}
+
+.tldr {
+  /* grid-row:4; */
+  grid-column:1/13;
+}
+
+.details {
+  /* grid-row:4; */
+  grid-column:1/13;
+}
+
+.overview {
+  grid-column: 1/13;
+}
+
+.gallery .image {
+  max-width: 350px;
+}
+
+}
+
+
+/* MEDIUM SCREENS */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+  .overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  }
+
+  .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: "Overpass";
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.hamburger a{
+  font-size:20px;
+}
+
+.tldr {
+  /* grid-row:4; */
+  grid-column:1/13;
+}
+
+.details {
+  /* grid-row:4; */
+  grid-column:1/13;
+}
+
+.overview {
+  grid-column: 1/13;
+}
+
+.gallery .image {
+  max-width: 450px;
+}
+
+.mainContent{
+  grid-column: 2/12;
+}
+
+}
+
+
+/* LARGE SCREENS */
+@media screen and (min-width: 600px) {
+
+
+  .header {
+    grid-column: 3/11;
+
+  }
+  .one-project, .placeholder {
+    width: 475px;
+    height: 250px;
+  }
+
+  .overlay {
+    display: inline-block;
+    grid-row:1;
+    grid-column: 7/13;
+    text-align:right;
+  }
+
+  .overlay .closebtn {
+    display: none;
+  }
+
+
+  .hamburger {
+    display: none;
+  }
+
+  .tldr {
+    grid-column:2/8;
+  }
+
+  .details {
+    grid-column:9/12;
+  }
+
+  .overview{
+    grid-column: 2/12;
+  }
+
+  .mainContent{
+    grid-column: 3/11;
+  }
+
+  .tldr {
+    font-size:1.25rem;
+  }
+
+  .details{
+    font-size: 1rem;
+  }
+
+  .gallery .image {
+    max-width: 33%;
+  }
+
+  .gallery .four {
+    max-width: 25%;
+  }
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UX Researcher & Designer</title>
+    <link rel="stylesheet" type="text/css" href="css/newCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <div class="logo"><a href="#"><img src="images/logo.png" alt="Home" height="25px"></a></div>
+
+      <div class="nav hamburger"><a href="javascript:void(0)" onclick="openNav()">&#9776;</a></div>
+
+      <div class="overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Writing</a>
+        <a href="#">Resume</a>
+        </div>
+
+
+      </div>
+
+      <div class="header center">
+        <p>👋 Hi my name is William. I'm a UX <a href="#">research</a> & <a href="#">design</a> grad student @ <a href="http://si.umich.edu" target="_blank">University of Michigan</a> seeking full-time opportunities.</p>
+      </div>
+
+      <div class="projects">
+        <div class="one-project mix research design">
+          <figure class="wp-caption">
+              <a href="lofob.html"><img src="images/lofob/tile-lofob.png" alt="LOFOB tile card"></a>
+                </figure>
+        </div>
+
+        <div class="one-project mix research">
+          <figure class="wp-caption">
+            <a href="tumblr.html"><img src="images/tumblr/tile-tumblr.png" alt="Tumblr tile card"></a></figure>
+        </div>
+
+        <div class="one-project mix design research">
+          <figure class="wp-caption">
+            <a href="unio.html"><img src="images/unio/tile-unio.png" alt="UNIO tile card"></a></figure>
+        </div>
+
+        <div class="placeholder"></div>
+
+      </div>
+
+    </div>
+
+
+    <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+
+  </body>
+</html>
